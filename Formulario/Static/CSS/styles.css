@@ -1,0 +1,80 @@
+/* Configuración básica del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.content-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Estilo del encabezado */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la tarjeta de información */
+.info-card {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+    font-size: 1.7em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
