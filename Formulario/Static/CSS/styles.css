@@ -78,3 +78,123 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
+
+/* ------------------------ */
+/* Estilos para formulario.html */
+/* Estilos para la página del formulario */
+/* Estilos para la página del formulario */
+.formulario-page .form-container {
+    background-color: #fff;
+    padding: 40px;
+    width: 60%;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formulario-page .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px; /* Aumenta el espacio entre filas */
+}
+
+.formulario-page .form-group {
+    flex: 0 0 48%;
+    margin-bottom: 25px; /* Aumenta el espacio entre cada grupo de campos */
+}
+
+.formulario-page .form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.formulario-page .form-group input,
+.formulario-page .form-group select,
+.formulario-page .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 8px; /* Espacio entre label y campo */
+}
+
+.formulario-page .form-group input:focus,
+.formulario-page .form-group select:focus,
+.formulario-page .form-group textarea:focus {
+    border-color: #007bff;
+}
+
+.formulario-page .form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.formulario-page .form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px; /* Espacio adicional para checkbox */
+}
+
+.formulario-page .add-employment-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.formulario-page .add-employment-btn:hover {
+    text-decoration: underline;
+}
+
+/* Botones de navegación */
+.formulario-page .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

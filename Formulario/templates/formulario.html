@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Hoja de Vida</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        .form-group {
+            margin-bottom: 15px; /* Reducir el espacio entre las opciones */
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 14px; /* Tamaño de fuente más pequeño para las etiquetas */
+        }
+
+        input, select {
+            width: 100%;
+            padding: 6px; /* Reducir el padding para hacer los campos más pequeños */
+            font-size: 14px; /* Tamaño de fuente más pequeño para los campos */
+            box-sizing: border-box;
+        }
+
+        .btn-primary {
+            padding: 8px 16px; /* Tamaño más pequeño para el botón */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px; /* Ajuste en el tamaño de la fuente del botón */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="formulario-page">
+    <div class="form-container">
+        <h1>Formulario de Hoja de Vida</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="nacimiento">Fecha de Nacimiento (Año y Ciudad):</label>
+                <input type="text" id="nacimiento" name="nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="residencia">Ciudad de Residencia:</label>
+                <input type="text" id="residencia" name="residencia" required>
+            </div>
+            <div class="form-group">
+                <label for="titulo">Estudios Recientes (Título y Año de Obtención):</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="trabajo">Experiencia Laboral (Si ha trabajado antes):</label>
+                <input type="text" id="trabajo" name="trabajo" required>
+            </div>
+            <div class="form-group">
+                <label for="estado_civil">Estado Civil:</label>
+                <input type="text" id="estado_civil" name="estado_civil" required>
+            </div>
+            <div class="form-group">
+                <label for="identificacion">Identificación (Cédula o Pasaporte):</label>
+                <input type="text" id="identificacion" name="identificacion" required>
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
+                    <option value="no decir">Prefiero no decir</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

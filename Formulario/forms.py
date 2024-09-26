@@ -1,20 +1,22 @@
 from django import forms
-from .models import Register
-from django.contrib.auth.hashers import make_password
+from .models import Register, DatosPersonales
+from django.contrib.auth.models import User
 
-# Formulario para el registro
 class RegisterForm(forms.ModelForm):
     class Meta:
-        model = Register  # Modelo del cual trae los datos
-        fields = [
-            'name',
-            'username',
-            'email',
-            'password',
+        model = User
+        fields = ['username', 'email', 'password']
 
-        ]
+    password = forms.CharField(widget=forms.PasswordInput)
 
-# Formulario de Django para el login
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=100)
     password = forms.CharField(widget=forms.PasswordInput)
+
+class DatosPersonalesForm(forms.ModelForm):
+    class Meta:
+        model = DatosPersonales
+        fields = ['nombres', 'apellidos', 'fecha_nacimiento', 'ciudad_nacimiento', 
+                  'telefono', 'ciudad_residencia', 'titulo', 'anio_obtencion',
+                  'experiencia_laboral', 'estado_civil', 'identificacion', 
+                  'numero_identificacion', 'sexo', 'genero']
